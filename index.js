@@ -29,7 +29,7 @@ function playerPick(document) {
   //   if the user guess correct check to see if the player sequence is the same as the computers to determine if the user is done and the computer can start it's next sequence
   else if (gameChoice.length === playerChoice.length) {
     playerChoice = [];
-    setTimeout(() => startGame(), 2000);
+    setTimeout(() => startGame(), 1500);
   }
 }
 
@@ -49,7 +49,7 @@ function playerButtonBlink(choice) {
   document.getElementById(choice).classList.add("toggle");
   setTimeout(
     () => document.getElementById(choice).classList.remove("toggle"),
-    1000
+    500
   );
 }
 
@@ -58,7 +58,7 @@ function buttonBlink(choice) {
   document.getElementById(choice).classList.add("toggle");
   setTimeout(
     () => document.getElementById(choice).classList.remove("toggle"),
-    1000
+    500
   );
   //   This is here so the buttons take turn blinking instead of them blinking all at once
   setTimeout(() => {
@@ -68,7 +68,7 @@ function buttonBlink(choice) {
     } else {
       id = 0;
     }
-  }, 1500);
+  }, 1000);
 }
 
 // This function is the computer logic that selects random numbers and blinks the buttons the user has to repeat
